@@ -1,17 +1,17 @@
 <?php
-define('HOME_URL', 'http://localhost/codedao/');
-define('DB_NAME', 'codedao');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '');
-define('DB_HOST', 'localhost');
-
 class Database
 {
+    const HOME_URL = "http://localhost/codedao/";
+    const DB_NAME = "codedao";
+    const DB_USER = 'root';
+    const DB_PASSWORD = '';
+    const DB_HOST = 'localhost';
+    
     private $connection;
 
     public function connectDatabase()
     {
-        $this->connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        $this->connection = mysqli_connect(self::DB_HOST, self::DB_USER, self::DB_PASSWORD, self::DB_NAME);
         if ($this->connection->error) {
             die("Connect database error!");
         }
