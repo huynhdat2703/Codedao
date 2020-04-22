@@ -6,7 +6,7 @@ class Database
     const DB_USER = 'root';
     const DB_PASSWORD = '';
     const DB_HOST = 'localhost';
-    
+
     private $connection;
 
     public function connectDatabase()
